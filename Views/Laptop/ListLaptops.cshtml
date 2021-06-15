@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Bai_4._1_Pride_Prejudice.Models.Laptop>
+@{
+    ViewBag.Title = "ListLaptops";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.TitlePageName</h2>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel panel-heading">@item.Name</div>
+                <div class="panel-body">
+                    <p>
+                        <strong>CPU:</strong> @item.CPU
+                    </p>
+                    <p>
+                        <strong>RAM:</strong> @item.RAM
+                    </p>
+                    <p>
+                        <strong>SSD:</strong> @item.SSD
+                    </p>
+                    <p>
+                        <strong>Color:</strong> @item.Color
+                    </p>
+                    <p>
+                        <strong>Inch:</strong> @item.Inch
+                    </p>
+                 
+                    <p>
+                        <strong>Price:</strong> @item.Price
+                    </p>
+
+                    <p>
+                        <img src="/@item.Image" alt="hinh thumnail" />
+                    </p>
+                </div>
+                <div class="panel-footer clearfix">
+                    <div class="pull-right">
+                        <a href="#" class="btn btn-primary">Order</a>
+                        <a href="#" class="btn btn-default">Read more....</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+</div>
